@@ -23,15 +23,20 @@ import java.util.Random;
 
 public class StringUtil {
 
+	//判断是否是数值
+	public static boolean isNumber(String src){
+		
+		String reges = "^[0-9]+(.[0-9]+)?$";
+		return src.matches(reges);
+		}
 	//方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
 	public static boolean hasLength(String src){
 	//TODO 实现代码
 		return null!=src && src.length()>0;
 	}
-	//方法2：判断源字符串是否有值，空引号(空白字符串)和空格也算没值 (5分)
-	public static boolean hasText(String src){
-	//TODO 实现代码
-		return src!=null && src.trim().length()>0;
+	//判断是否是文本值
+	public static boolean hasText(String txt) {
+		return txt!=null && txt.trim().length()>0;
 	}
 	//方法3：返回参数length个中文汉字字符串，字符集必须在GB2312(相当于中文简体)范围内，例如“中呀被”(5分)
 	public static String randomChineseString(int length){
@@ -94,5 +99,12 @@ public class StringUtil {
 		return name1+name2;
 		
 	}
+	/**
+	 * //方法2：判断源字符串是否有值，空引号(空白字符串)和空格也算没值 (5分)
+	public static boolean hasText(String src){
+	//TODO 实现代码
+		return src!=null && src.trim().length()>0;
+	}
+	 */
 
 }

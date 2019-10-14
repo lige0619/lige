@@ -29,7 +29,10 @@ import org.junit.Test;
 
 public class DateUtilTest {
 
-	
+	public void testgetAge() {
+		int i = DateUtil.getAge(new Date());
+		System.out.println(i);
+	}
 	//月初
 	@Test
 	public void testGetDateByInitMonth() {
